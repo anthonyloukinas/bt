@@ -1,8 +1,8 @@
 <?php
   //init variables needed to connect to database
-  $dsn = 'mysql:host=192.3.32.227; dbname=butler_tech';
-  $db_user = 'lantech';
-  $db_pass = 'lantech!';
+  $dsn = 'mysql:host=192.3.32.227; dbname=studentSync';
+  $db_user = 'dev';
+  $db_pass = 'development01!';
 
   try{
     //create an instance of the PDO class with the required parameters
