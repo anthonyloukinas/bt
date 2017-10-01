@@ -28,7 +28,7 @@
     $firstname = $_POST['firstname'];
     $lastname = $_POST['lastname'];
     $password = genPass();
-    $username = substr($firstname, 0, 1) . $lastname;
+    $username = substr($firstname, 0, 1) .  $lastname;
 
     if(checkDatabase("users", "email", $email, $db)){
       $result = flashMessage("Email is already taken", "FAIL");
@@ -46,7 +46,7 @@
         $statement = $db->prepare($sqlInsert);
 
         //add the data into the database
-        $statement->execute(array(':firstname' => ucfirst($firstname), ':lastname' => ucfirst($lastname),':username' => $username, ':email' => $email, ':password' => $hashed_password));
+        $statement->execute(array(':firstname' => ucfirst($firstname), ':lastname' => ucfirst($lastname),':username' => strtolower($username), ':email' => $email, ':password' => $hashed_password));
 
         if($statement->rowCount() == 1){
 
