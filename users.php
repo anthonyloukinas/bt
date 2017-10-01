@@ -128,15 +128,29 @@
               <div class="panel-body">
                 <table class="table table-striped table-hover">
                   <tr>
-                    <th></th>
-                    <th></th>
-                    <th></th>
-                    <th></th>
+                    <th>Account</th>
+                    <th>Status</th>
+                    <th>Creation</th>
+                    <th>Delete</th>
                   </tr>
                   <?php foreach($rows as $row): ?>
                   <tr>
                     <td><?php echo $row['firstname']; ?> @<?php echo $row['username']; ?></td>
-                    <td><div style="font-size: .8em;"> Account Status:<?php if($row['activated'] == 1) echo '<span class="label label-success">Activated</span>'?></div></td>
+                    <td>
+                      <div style="">
+                        <p></p>
+                        <p>
+                          <?php 
+                            if($row['activated'] == 1){ 
+                              echo '<span class="label label-success">Active</span>';
+                            }
+                            else{ 
+                              echo '<span class="label label-danger">Inactive</span>';
+                            }
+                          ?>
+                        </p>
+                      </div>
+                    </td>
                     <td><?php echo $row['join_date']; ?></td>
                     <td>
                       <form action="" method="post">
