@@ -131,7 +131,7 @@
                     <th>Account</th>
                     <th>Status</th>
                     <th>Creation</th>
-                    <th>Delete</th>
+                    <th></th>
                   </tr>
                   <?php foreach($rows as $row): ?>
                   <tr>
