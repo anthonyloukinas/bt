@@ -1,6 +1,6 @@
 <?php
   //init variables needed to connect to database
-  $dsn = 'mysql:host=192.3.32.227; dbname=studentSync';
+  $dsn = 'mysql:host=localhost; dbname=studentSync';
   $db_user = 'dev';
   $db_pass = 'development01!';
 
